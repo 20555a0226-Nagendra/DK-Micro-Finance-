@@ -71,6 +71,14 @@ const About = () => {
 
   // Team members data
   const teamMembers = [
+     {
+      name: "M. Prabhakar",
+      position: "Director",
+      department: "Operations",
+      image: "/images/director.png",
+      description: "Dedicated team leader ensuring smooth loan processing and client satisfaction.",
+      color: "from-violet-500 to-amber-500"
+    },
     {
       name: "L. Gowthami",
       position: "HR Business Partner",
@@ -94,7 +102,8 @@ const About = () => {
       image: "/images/TL.png",
       description: "Dedicated team leader ensuring smooth loan processing and client satisfaction.",
       color: "from-violet-500 to-amber-500"
-    }
+    },
+    
   ];
 
   const containerVariants = {
@@ -255,7 +264,7 @@ const About = () => {
                       className="w-full h-[380px] md:h-[480px] object-cover object-top transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
-                      <div className="text-white text-sm font-semibold">Leadership Team</div>
+                      <div className="text-white text-sm font-semibold">D. Ravishankar Yadav</div>
                       <div className="text-amber-300 text-xs uppercase tracking-wider">DK Micro Finance</div>
                     </div>
                   </div>
@@ -284,17 +293,17 @@ const About = () => {
 
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
-            {teamMembers.map((member, index) => (
-              <motion.div
-                key={index}
-                custom={index}
-                initial="hidden"
-                animate={isTeamInView ? "visible" : "hidden"}
-                variants={teamCardVariants}
-                whileHover={{ y: -8, scale: 1.03 }}
-                className="bg-white rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300 border border-violet-100 hover:border-violet-200"
-              >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-7xl mx-auto">
+  {teamMembers.map((member, index) => (
+    <motion.div
+      key={index}
+      custom={index}
+      initial="hidden"
+      animate={isTeamInView ? "visible" : "hidden"}
+      variants={teamCardVariants}
+      whileHover={{ y: -8, scale: 1.03 }}
+      className="bg-white rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300 border border-violet-100 hover:border-violet-200"
+    >
                 {/* Image Container */}
                 <div className="relative h-64 sm:h-72 md:h-80 overflow-hidden">
                   <div className={`absolute inset-0 bg-gradient-to-r ${member.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-10`}></div>
@@ -358,7 +367,7 @@ const About = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
               <motion.div variants={itemVariants} className="lg:text-right">
-                <div className="bg-white p-6 md:p-8 rounded-2xl shadow-lg border-l-4 border-violet-500 border border-slate-100 hover:shadow-xl hover:border-violet-300 transition-all duration-300">
+                <div className="bg-white p-6 md:p-8 rounded-2xl shadow-lg border-l-4 border-violet-500 border hover:shadow-xl hover:border-violet-300 transition-all duration-300">
                   <h3 className="text-lg md:text-2xl font-bold text-violet-800 mb-4">
                     Financial Services Excellence
                   </h3>
@@ -373,7 +382,7 @@ const About = () => {
               </motion.div>
 
               <motion.div variants={itemVariants} className="lg:mt-12">
-                <div className="bg-white p-6 md:p-8 rounded-2xl shadow-lg border-l-4 border-amber-500 border border-slate-100 hover:shadow-xl hover:border-amber-300 transition-all duration-300">
+                <div className="bg-white p-6 md:p-8 rounded-2xl shadow-lg border-l-4 border-amber-500 border hover:shadow-xl hover:border-amber-300 transition-all duration-300">
                   <h3 className="text-lg md:text-2xl font-bold text-amber-800 mb-4">
                     Our Journey in Financial Services
                   </h3>
